@@ -1,10 +1,10 @@
-# 🛡️ Projeto RPG Console/Sistema
+# Projeto RPG Console/Sistema
 
 Bem-vindo ao repositório do nosso sistema de **RPG**! Este projeto simula um ambiente de combate baseado em turnos, estruturado com conceitos de Programação Orientada a Objetos (POO), onde classes, atributos e métodos representam entidades e ações do jogo.
 
 ---
 
-## 📜 Sobre o Projeto
+## Sobre o Projeto
 
 O sistema simula confrontos entre **Heróis** e **Vilões**, gerenciando atributos vitais como vida, estamina e força, além de mecânicas de combate, habilidades especiais e itens consumíveis.
 
@@ -44,7 +44,7 @@ O RPG divide-se em dois grandes lados, contendo quatro classes principais de per
 
 ---
 
-## 🧠 Modelagem Orientada a Objetos
+## Modelagem Orientada a Objetos
 
 O projeto foi estruturado utilizando a lógica de identificadores de POO:
 
@@ -54,18 +54,18 @@ O projeto foi estruturado utilizando a lógica de identificadores de POO:
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 *(Instruções de instalação, compilação e execução do código dependem da linguagem escolhida para a implementação, como Java, Python, C# ou C++).*
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio-rpg.git
+   git clone https://github.com/Ferreira034Wound/RPG
    ```
 2. Abra o projeto na sua IDE de preferência.
 3. Execute a classe principal para iniciar o sistema de combate.
 
 ---
 
-## 🤝 Contribuindo
+## Contribuindo
 Contribuições, sugestões de melhorias na modelagem ou novas classes de personagens são sempre bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
