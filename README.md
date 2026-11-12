@@ -1,71 +1,57 @@
-# Projeto RPG Console/Sistema
+Projeto RPG Console/Sistema
 
-Bem-vindo ao repositório do nosso sistema de **RPG**! Este projeto simula um ambiente de combate baseado em turnos, estruturado com conceitos de Programação Orientada a Objetos (POO), onde classes, atributos e métodos representam entidades e ações do jogo.
+Bem-vindo ao repositório do nosso sistema de RPG! Este projeto simula um ambiente de combate baseado em turnos, estruturado com conceitos de Programação Orientada a Objetos (POO), onde classes, atributos e métodos representam entidades e ações do jogo.
 
----
+Sobre o Projeto
 
-## Sobre o Projeto
+O sistema simula uma batalha em rodadas em que um grupo de quatro personagens enfrenta juntos um Ogro chefe, inimigo de todos. Cada personagem gerencia atributos como vida, estamina e ataque, além de habilidades especiais e de um item consumível de cura.
 
-O sistema simula confrontos entre **Heróis** e **Vilões**, gerenciando atributos vitais como vida, estamina e força, além de mecânicas de combate, habilidades especiais e itens consumíveis.
+🎮 Mecânicas Principais
+Turnos: a batalha acontece em rodadas. Em cada rodada, cada personagem vivo joga na sua vez (controlado pelo jogador) e, depois, o Ogro joga (controlado pelo computador).
+Ações em Combate: no seu turno, o personagem pode atacar, usar a habilidade especial ou usar um consumível de cura.
+Habilidades Especiais: gastam estamina. Se a estamina for insuficiente, o jogador escolhe outra ação.
+Item Consumível (cura): recupera 40 pontos de vida, sem ultrapassar a vida inicial. Cada personagem possui 2 poções.
+Derrota: quando um personagem sofre dano e sua vida chega a zero (0), ele é considerado derrotado.
+Fim de Batalha: a batalha termina quando o Ogro é derrotado ou quando todo o grupo cai. O status de cada personagem é exibido no início de cada rodada.
+👥 Personagens
 
-### 🎮 Mecânicas Principais
-* **Ações em Combate:** Durante a batalha, os personagens podem *atacar*, *receber dano* ou *usar um consumível*.
-* **Itens Consumíveis:** Podem ser utilizados para recuperar parte da vida ou da estamina do personagem.
-* **Fim de Batalha:** Ao término de cada confronto, o jogador pode visualizar o status atualizado de cada personagem.
-* **Derrota:** Quando um personagem sofre dano e sua vida chega a zero ($0$), ele é considerado derrotado.
+Todos os personagens do grupo lutam do mesmo lado contra o Ogro. Os nomes abaixo são apenas dos personagens, não há separação entre heróis e vilões.
 
----
-
-## 👥 Tipos de Personagens
-
-O RPG divide-se em dois grandes lados, contendo quatro classes principais de personagens:
-
-### 🦸 Heróis
-1. **O Espartano**
-   * **Estilo:** Focado em combate corpo a corpo. Possui uma armadura resistente.
-   * **Atributos:** Alta força, vida moderada e poucos pontos de estamina.
-   * **Habilidade Especial:** *Lança de Mil Soldados* (causa o dobro de dano).
-
-2. **A Bruxa**
-   * **Estilo:** Focado em combate à longa distância com uma grande reserva energética.
-   * **Atributos:** Muita estamina, vida moderada e poucos pontos de força.
-   * **Habilidade Especial:** *Rajada de Gelo* (causa dano adicional).
-
-### 🦹 Vilões
-1. **O Cyclope**
-   * **Estilo:** Inimigo bruto e poderoso, porém extremamente lento.
-   * **Atributos:** Pontos elevados de força e vida.
-   * **Habilidade Especial:** *Ataque Devastador*.
-
-2. **As Fúrias**
-   * **Estilo:** Inimigas ágeis que atuam em grupo, exigindo baixo custo de habilidade.
-   * **Atributos:** Muita estamina, mas com poucos pontos de vida.
-   * **Habilidade Especial:** *Ataque Aéreo*.
-
----
-
-## Modelagem Orientada a Objetos
+Classe	Personagem	Vida	Ataque	Estamina	Habilidade Especial	Custo
+Espartano	Deimos	150	40	80	Lança de Mil Soldados (dobro de dano)	35
+Bruxa	Yen	90	30	150	Rajada de Gelo (dano adicional)	20
+Cyclope	Polifemo	200	60	100	Ataque Devastador	50
+Fúria	Tisífone	70	20	120	Ataque Aéreo	5
+Ogro (chefe)	Grumash	500	35	200	Pancada Esmagadora	30
+Espartano: focado em combate corpo a corpo, com alta força, vida moderada e poucos pontos de estamina.
+Bruxa: focada em combate à longa distância, com muita estamina, vida moderada e poucos pontos de força.
+Cyclope: bruto e poderoso, com pontos elevados de força e vida.
+Fúria: ágil, com muita estamina e pouca vida. Sua habilidade tem baixo custo.
+Ogro: o chefe da batalha, com muita vida. Ataca um personagem aleatório a cada turno.
+Modelagem Orientada a Objetos
 
 O projeto foi estruturado utilizando a lógica de identificadores de POO:
 
-* **Substantivos Comuns:** Representam as **Classes** e os **Atributos** (ex: `Personagem`, `Vida`, `Estamina`, `Força`, `Armadura`).
-* **Substantivos Próprios:** Representam os **Objetos** instanciados (ex: `Espartano`, `Bruxa`, `Cyclope`, `Fúrias`).
-* **Verbos e Locuções Verbais:** Representam os **Métodos** ou ações (ex: `atacar()`, `defender()`, `receberDano()`, `usarConsumivel()`, `mostrarStatus()`).
+Substantivos Comuns: representam as Classes e os Atributos (ex: Personagem, vida, estamina, ataque, curas).
+Substantivos Próprios: representam os Objetos instanciados (ex: Deimos, Yen, Polifemo, Tisífone, Grumash).
+Verbos e Locuções Verbais: representam os Métodos ou ações (ex: atacar(), receberDano(), usarConsumivel(), mostrarStatus(), usarHabilidade(), estaVivo()).
 
----
+Estrutura de classes:
 
-## Como Executar
+Personagem (classe abstrata, implementa a interface atacante) é a base de todos.
+Espartano, Bruxa, Cyclope, Furia e Ogro herdam de Personagem e implementam a interface habilidadeEspecial.
+Main controla as rodadas e os turnos (turnoJogador, turnoOgro).
 
-*(Instruções de instalação, compilação e execução do código dependem da linguagem escolhida para a implementação, como Java, Python, C# ou C++).*
+O diagrama de classes está em diagrama.md.
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/Ferreira034Wound/RPG
-   ```
-2. Abra o projeto na sua IDE de preferência.
-3. Execute a classe principal para iniciar o sistema de combate.
+Como Executar
 
----
+O projeto é escrito em Java (é necessário ter o JDK instalado).
 
-## Contribuindo
-Contribuições, sugestões de melhorias na modelagem ou novas classes de personagens são sempre bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+Clone este repositório:
+git clone https://github.com/Ferreira034Wound/RPG
+Abra a pasta do projeto no VS Code (ou na sua IDE de preferência).
+Compile e execute pelo terminal:
+javac Main.java
+java Main
+Durante a batalha, digite o número da ação desejada (1 - Atacar, 2 - Habilidade, 3 - Consumível) e pressione Enter. 
