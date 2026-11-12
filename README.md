@@ -9,7 +9,7 @@ Bem-vindo ao repositório do nosso sistema de **RPG**! Este projeto simula um am
 O sistema simula confrontos entre **Heróis** e **Vilões**, gerenciando atributos vitais como vida, estamina e força, além de mecânicas de combate, habilidades especiais e itens consumíveis.
 
 ### 🎮 Mecânicas Principais
-* **Ações em Combate:** Durante a batalha, os personagens podem *atacar*, *defender*, *receber dano* ou *usar um consumível*.
+* **Ações em Combate:** Durante a batalha, os personagens podem *atacar*, *receber dano* ou *usar um consumível*.
 * **Itens Consumíveis:** Podem ser utilizados para recuperar parte da vida ou da estamina do personagem.
 * **Fim de Batalha:** Ao término de cada confronto, o jogador pode visualizar o status atualizado de cada personagem.
 * **Derrota:** Quando um personagem sofre dano e sua vida chega a zero ($0$), ele é considerado derrotado.
