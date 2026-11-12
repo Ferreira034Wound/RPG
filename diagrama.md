@@ -38,9 +38,18 @@ classDiagram
         +usar_habilidade(alvo)
     }
 
+    class Main {
+        +main()
+        +turno_jogador(personagem, ogro)
+        +turno_ogro(ogro, grupo)
+        +tem_vivos(equipe)
+        +ler_int(mensagem)
+    }
+
     Personagem <|-- Espartano : herda
     Personagem <|-- Bruxa : herda
     Personagem <|-- Cyclope : herda
     Personagem <|-- Furia : herda
     Personagem <|-- Ogro : herda
+    Main ..> Personagem : usa
 ```
