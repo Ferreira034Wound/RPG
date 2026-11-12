@@ -5,7 +5,6 @@ classDiagram
         -vida int
         -estamina int
         -ataque int
-        +defender
         +atacar(alvo)
         +receber_dano(valor)
         +mostrar_status()
@@ -14,7 +13,6 @@ classDiagram
 
        class Espartano {
        
-       -armadura
         +__init__(nome, vida, estamina, ataque)
         +usar_habilidade(alvo)
 
@@ -22,7 +20,6 @@ classDiagram
 
         class Bruxa {
 
-        -reserva
         +__init__(nome, vida, estamina, ataque)
         +usar_habilidade(alvo)
 
@@ -30,7 +27,6 @@ classDiagram
 
         class Cyclope{
 
-        -lentidao
         +__init__(nome, vida, estamina, ataque)
 
         }
