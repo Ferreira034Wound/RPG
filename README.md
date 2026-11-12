@@ -17,7 +17,7 @@ O sistema simula uma batalha em rodadas em que um grupo de quatro personagens en
 
 ## 👥 Personagens
 
-Todos os personagens do grupo lutam do mesmo lado contra o Ogro. Os nomes abaixo são apenas dos personagens, não há separação entre heróis e vilões.
+Todos os personagens do grupo lutam do mesmo lado contra o Ogro. Os nomes abaixo são apenas dos personagens.
 
 | Classe | Personagem | Vida | Ataque | Estamina | Habilidade Especial | Custo |
 |---|---|---|---|---|---|---|
@@ -69,6 +69,3 @@ java Main
 
 4. Durante a batalha, digite o número da ação desejada (1 - Atacar, 2 - Habilidade, 3 - Consumível) e pressione Enter.
 
-## Contribuindo
-
-Contribuições, sugestões de melhorias na modelagem ou novas classes de personagens são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
